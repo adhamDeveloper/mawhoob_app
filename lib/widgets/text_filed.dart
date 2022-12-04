@@ -25,37 +25,43 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50,
-      child: TextField(
-        autofocus: true,
-        textAlignVertical: TextAlignVertical.bottom,
-        textAlign: TextAlign.end,
-        enabled: enabled,
-        onChanged: (value) {
-          if (onChangedT != null) {
-            onChangedT!(value.toString());
-          }
-        },
-        style: const TextStyle(fontSize: 15, color: Colors.black),
-        controller: controller,
-        obscureText: isObscureText,
-        keyboardType: keyType,
-        decoration: InputDecoration(
-          hintText: text,
-          enabledBorder: border(borderColors: Colors.grey),
-          focusedBorder: border(
-            borderColors:  Colors.blue,
-          ),
-          prefixIcon: IgnorePointer(
-            ignoring: isIgnore,
-            child: IconButton(
-              onPressed: () => function!(),
-              icon: Icon(icons),
-              color: Colors.blue,
+    return Material(
+        borderRadius: BorderRadius.circular(40),
+        elevation: 10,
+        child:SizedBox(
+          height:
+          50,
+          child: TextField(
+          textAlignVertical: TextAlignVertical.bottom,
+          textAlign: TextAlign.end,
+          enabled: enabled,
+          onChanged: (value) {
+            if (onChangedT != null) {
+              onChangedT!(value.toString());
+            }
+          },
+          style: const TextStyle(fontSize: 15, color: Colors.black),
+          controller: controller,
+          obscureText: isObscureText,
+          keyboardType: keyType,
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.white,
+            hintText: text,
+            enabledBorder: border(borderColors: Colors.white),
+            focusedBorder: border(
+              borderColors:  Colors.blue,
             ),
+            prefixIcon: IgnorePointer(
+              ignoring: isIgnore,
+              child: IconButton(
+                onPressed: () => function!(),
+                icon: Icon(icons),
+                color: Colors.blue,
+              ),
+            ),
+            prefixStyle: const TextStyle(color: Colors.blue, fontSize: 15),
           ),
-          prefixStyle: const TextStyle(color: Colors.blue, fontSize: 15),
         ),
       ),
     );
@@ -64,7 +70,7 @@ class MyTextField extends StatelessWidget {
   OutlineInputBorder border({required Color borderColors}) {
     return OutlineInputBorder(
       borderSide: BorderSide(color: borderColors, width: 1),
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(40),
     );
   }
 }

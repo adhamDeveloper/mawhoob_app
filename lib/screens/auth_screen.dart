@@ -11,6 +11,9 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   bool _isVisible = false;
+  final bool groupValue = false;
+  final bool value = false;
+  late final ValueChanged<bool> onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +73,8 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
                 const SizedBox(height: 12),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      Navigator.pushReplacementNamed(context, '/home_screen'),
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -147,7 +151,8 @@ class _AuthScreenState extends State<AuthScreen> {
               Align(
                 alignment: Alignment.center,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushReplacementNamed(
+                      context, '/succsses_screen'),
                   style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
@@ -226,7 +231,7 @@ class _AuthScreenState extends State<AuthScreen> {
       context: context,
       builder: (context) {
         return SizedBox(
-          height: 550,
+          height: 650,
           child: ListView(
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.all(20),
@@ -250,6 +255,18 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               const SizedBox(height: 10),
               const MyTextField(
+                text: 'البريد الإلكتروني',
+                keyType: TextInputType.emailAddress,
+                icons: Icons.email,
+              ),
+              const SizedBox(height: 10),
+              const MyTextField(
+                text: 'اسم الجامعة/الكلية/المدرسة',
+                keyType: TextInputType.text,
+                icons: FontAwesomeIcons.school,
+              ),
+              const SizedBox(height: 10),
+              const MyTextField(
                 text: 'عنوان الإقامة',
                 keyType: TextInputType.text,
                 icons: FontAwesomeIcons.addressCard,
@@ -267,11 +284,31 @@ class _AuthScreenState extends State<AuthScreen> {
                 keyType: TextInputType.visiblePassword,
                 icons: _isVisible ? Icons.visibility_off : Icons.visibility,
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 10),
+              const MyTextField(
+                text: 'ارفاق صورة شخصية',
+                keyType: TextInputType.text,
+                icons: FontAwesomeIcons.upload,
+              ),
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  Radio<bool>(
+                      groupValue: groupValue,
+                      value: value,
+                      onChanged: (bool? newValue) {
+                        setState(() {
+                          onChanged(newValue!);
+                        });
+                      }),
+                  const Text('Terms & conditions')
+                ],
+              ),
               Align(
                 alignment: Alignment.center,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushReplacementNamed(
+                      context, '/succsses_screen'),
                   style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
