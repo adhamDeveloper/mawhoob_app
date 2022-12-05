@@ -30,7 +30,7 @@ class SuccssesScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () =>
-                  Navigator.pushReplacementNamed(context, '/home_screen'),
+                  Navigator.pushReplacementNamed(context, '/main_screen'),
               style: ElevatedButton.styleFrom(
                   minimumSize: const Size(0, 45),
                   shape: RoundedRectangleBorder(

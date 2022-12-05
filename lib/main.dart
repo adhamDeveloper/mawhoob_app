@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mawhoop/screens/auth_screen.dart';
-import 'package:mawhoop/screens/home_screen.dart';
+import 'package:mawhoop/screens/chat_person_screen.dart';
+import 'package:mawhoop/screens/chat_screen.dart';
+import 'package:mawhoop/screens/main_screen.dart';
 import 'package:mawhoop/screens/succsses_screen.dart';
 
 void main() {
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/auth_screen': (context) => AuthScreen(),
         '/succsses_screen': (context) => SuccssesScreen(),
-        '/home_screen': (context) => HomeScreen(),
+        '/main_screen': (context) => MainScreen(),
+        '/chat_screen': (context) => ChatScreen(),
+        '/chat_person_screen': (context) => ChatScreenPerson(),
       },
     );
   }

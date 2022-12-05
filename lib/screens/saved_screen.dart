@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:mawhoop/widgets/text_filed.dart';
 
-class HomeScreen extends StatefulWidget {
+import '../widgets/text_filed.dart';
+
+class SavedScreen extends StatefulWidget {
+  const SavedScreen({Key? key}) : super(key: key);
+
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<SavedScreen> createState() => _SavedScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SavedScreenState extends State<SavedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,16 +28,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children:  [
-                         const  Icon(Icons.quiz, color: Colors.white),
-                         const  SizedBox(width: 20),
-
-                         const  Spacer(),
-                          IconButton(onPressed: (){
-                            Navigator.pushNamed(context, '/chat_screen');
-                          },icon: Icon(Icons.message), color: Colors.white,),
-                         const  SizedBox(width: 20),
-                         const  Icon(Icons.more_vert, color: Colors.white),
+                        children: const [
+                          Icon(Icons.quiz, color: Colors.white),
+                          SizedBox(width: 20),
+                          Icon(Icons.arrow_back_ios_new, color: Colors.white),
+                          Spacer(),
+                          Icon(Icons.message, color: Colors.white),
+                          SizedBox(width: 20),
+                          Icon(Icons.more_vert, color: Colors.white),
                         ],
                       ),
                       const Spacer(),
@@ -55,8 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 20,
                         ),
                       ),
-                      const Spacer(),
-                      const Spacer(),
+                      Spacer(),
                     ],
                   ),
                 ),
@@ -245,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.only(top: 220, left: 190),
                   child: SizedBox(
                     width: 140,
-                    height: 55,
+                    height: 50,
                     child: Card(
                       elevation: 10,
                       shape: RoundedRectangleBorder(

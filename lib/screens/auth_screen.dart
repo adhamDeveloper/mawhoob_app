@@ -28,7 +28,6 @@ class _AuthScreenState extends State<AuthScreen> {
               left: -50,
               child: Image.asset('assets/background2.png'),
             ),
-
             ListView(
               padding: const EdgeInsets.only(right: 30, left: 30, top: 60),
               children: [
@@ -74,7 +73,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 const SizedBox(height: 12),
                 ElevatedButton(
                   onPressed: () =>
-                      Navigator.pushReplacementNamed(context, '/home_screen'),
+                      Navigator.pushNamed(context, '/main_screen'),
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -151,7 +150,7 @@ class _AuthScreenState extends State<AuthScreen> {
               Align(
                 alignment: Alignment.center,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushReplacementNamed(
+                  onPressed: () => Navigator.pushNamed(
                       context, '/succsses_screen'),
                   style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -307,7 +306,7 @@ class _AuthScreenState extends State<AuthScreen> {
               Align(
                 alignment: Alignment.center,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushReplacementNamed(
+                  onPressed: () => Navigator.pushNamed(
                       context, '/succsses_screen'),
                   style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
