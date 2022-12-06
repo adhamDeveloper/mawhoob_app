@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.mawhoop">
    <application
-        android:label="mawhoop"
+        android:label="Mawhoob"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_apps">
         <activity
             android:name=".MainActivity"
             android:exported="true"

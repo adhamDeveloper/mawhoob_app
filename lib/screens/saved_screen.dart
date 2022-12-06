@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../widgets/text_filed.dart';
 
 class SavedScreen extends StatefulWidget {
-  const SavedScreen({Key? key}) : super(key: key);
-
   @override
   State<SavedScreen> createState() => _SavedScreenState();
 }
@@ -77,165 +75,160 @@ class _SavedScreenState extends State<SavedScreen> {
                             children: [
                               const SizedBox(height: 15),
                               const Text(
-                                'مشاريع أضيفت حديثاً',
+                                'الأعلى تقييماً في هذا المجال',
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
-                                  color: Color(0xffE2B0B3),
+                                  color: Color(0xffFDC93A),
                                   fontSize: 20,
                                 ),
                               ),
                               const SizedBox(height: 5),
                               SingleChildScrollView(
+                                physics: const BouncingScrollPhysics(),
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: [
-                                    SizedBox(
-                                      height: 170,
-                                      width: 200,
-                                      child: Card(
-                                        child: Column(
-                                          children: [
-                                            Expanded(
-                                              child: Image.asset(
-                                                'assets/image1.png',
-                                                fit: BoxFit.cover,
-                                                width: double.infinity,
-                                              ),
-                                            ),
-                                            const Expanded(
-                                              child: ListTile(
-                                                trailing: CircleAvatar(
-                                                  radius: 20,
-                                                ),
-                                                title: Text(' الرسامة الصغيرة'),
-                                                subtitle: Text(
-                                                    'أريج محمد  I    الرسم'),
-                                              ),
-                                            ),
-                                          ],
+                                    Column(
+                                      children: const [
+                                        CircleAvatar(
+                                          backgroundColor: Colors.cyanAccent,
+                                          radius: 35,
+                                          foregroundImage:
+                                              AssetImage('assets/asset-4.png'),
                                         ),
-                                      ),
+                                        Text('سيف الجابري')
+                                      ],
                                     ),
-                                    SizedBox(
-                                      height: 170,
-                                      width: 200,
-                                      child: Card(
-                                        child: Column(
-                                          children: [
-                                            Expanded(
-                                              child: Image.asset(
-                                                'assets/image2.png',
-                                                fit: BoxFit.cover,
-                                                width: double.infinity,
-                                              ),
-                                            ),
-                                            const Expanded(
-                                              child: ListTile(
-                                                trailing: CircleAvatar(
-                                                  radius: 20,
-                                                ),
-                                                title: Text(' الرسامة الصغيرة'),
-                                                subtitle: Text(
-                                                    'أريج محمد  I    الرسم'),
-                                              ),
-                                            ),
-                                          ],
+                                    const SizedBox(width: 20),
+                                    Column(
+                                      children: const [
+                                        CircleAvatar(
+                                          radius: 35,
+                                          foregroundImage:
+                                              AssetImage('assets/a.png'),
                                         ),
-                                      ),
+                                        Text('علي الخليل')
+                                      ],
                                     ),
-                                    SizedBox(
-                                      height: 170,
-                                      width: 200,
-                                      child: Card(
-                                        child: Column(
-                                          children: [
-                                            Expanded(
-                                              child: Image.asset(
-                                                'assets/image3.png',
-                                                fit: BoxFit.cover,
-                                                width: double.infinity,
-                                              ),
-                                            ),
-                                            const Expanded(
-                                              child: ListTile(
-                                                trailing: CircleAvatar(
-                                                  radius: 20,
-                                                ),
-                                                title: Text(' الرسامة الصغيرة'),
-                                                subtitle: Text(
-                                                    'أريج محمد  I    الرسم'),
-                                              ),
-                                            ),
-                                          ],
+                                    const SizedBox(width: 20),
+                                    Column(
+                                      children: const [
+                                        CircleAvatar(
+                                          radius: 35,
+                                          foregroundImage:
+                                              AssetImage('assets/asset-1.png'),
                                         ),
-                                      ),
+                                        Text('مريم سعيد')
+                                      ],
                                     ),
-                                    SizedBox(
-                                      height: 170,
-                                      width: 200,
-                                      child: Card(
-                                        child: Column(
-                                          children: [
-                                            Expanded(
-                                              child: Image.asset(
-                                                'assets/image2.png',
-                                                fit: BoxFit.cover,
-                                                width: double.infinity,
-                                              ),
-                                            ),
-                                            const Expanded(
-                                              child: ListTile(
-                                                trailing: CircleAvatar(),
-                                                title: Text(' الرسامة الصغيرة'),
-                                                subtitle: Text(
-                                                    'أريج محمد  I    الرسم'),
-                                              ),
-                                            ),
-                                          ],
+                                    const SizedBox(width: 20),
+                                    Column(
+                                      children: const [
+                                        CircleAvatar(
+                                          radius: 35,
+                                          foregroundImage:
+                                              AssetImage('assets/asset-2.png'),
                                         ),
-                                      ),
+                                        Text('فحر عبد السلام')
+                                      ],
                                     ),
-                                    SizedBox(
-                                      height: 170,
-                                      width: 200,
-                                      child: Card(
-                                        child: Column(
-                                          children: [
-                                            Expanded(
-                                              child: Image.asset(
-                                                'assets/image3.png',
-                                                fit: BoxFit.cover,
-                                                width: double.infinity,
-                                              ),
-                                            ),
-                                            const Expanded(
-                                              child: ListTile(
-                                                trailing: CircleAvatar(
-                                                  radius: 20,
-                                                ),
-                                                title: Text(' الرسامة الصغيرة'),
-                                                subtitle: Text(
-                                                    'أريج محمد  I    الرسم'),
-                                              ),
-                                            ),
-                                          ],
+                                    const SizedBox(width: 20),
+                                    Column(
+                                      children: const [
+                                        CircleAvatar(
+                                          radius: 35,
+                                          foregroundImage:
+                                              AssetImage('assets/asset-3.png'),
                                         ),
-                                      ),
+                                        Text('أروى سالم')
+                                      ],
                                     ),
+                                    const SizedBox(width: 20),
                                   ],
                                 ),
                               ),
                               const SizedBox(height: 15),
                               const Text(
-                                'الأكثر تقييماً لهذا الشهر',
+                                'أبرز الموهوبين',
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
-                                    fontSize: 20, color: Color(0xffFDC93A)),
+                                    fontSize: 20, color: Color(0xff58BACC)),
                               ),
-                              Image.asset('assets/component.png'),
-                              Image.asset('assets/component.png'),
-                              Image.asset('assets/component1.png'),
-                              Image.asset('assets/component1.png'),
+                              const ListTile(
+                                  title: Text(
+                                    'مريم غسان',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                  subtitle: Text(
+                                    '30s ago',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                  trailing: CircleAvatar(
+                                    radius: 30,
+                                    foregroundImage:
+                                        AssetImage('assets/asset-3.png'),
+                                  )),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Image.asset(
+                                      'assets/alp-studio-348253-unsplash.png'),
+                                  Image.asset(
+                                      'assets/juliana-malta-777706-unsplash.png'),
+                                  Image.asset(
+                                      'assets/sam-manns-379040-unsplash (1).png'),
+                                ],
+                              ),
+                              const ListTile(
+                                  title: Text(
+                                    'آمنة عبد اللطيف',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                  subtitle: Text(
+                                    '30s ago',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                  trailing: CircleAvatar(
+                                    radius: 30,
+                                    foregroundImage: AssetImage('assets/8.png'),
+                                  )),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Image.asset(
+                                      'assets/adam-whitlock-270558-unsplash.png'),
+                                  Image.asset(
+                                      'assets/warren-wong-242286-unsplash.png'),
+                                  Image.asset('assets/Group 157.png'),
+                                ],
+                              ),
+                              const ListTile(
+                                  title: Text(
+                                    'سيف الجابري',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                  subtitle: Text(
+                                    '30s ago',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                  trailing: CircleAvatar(
+                                    radius: 30,
+                                    foregroundImage:
+                                        AssetImage('assets/asset-4.png'),
+                                  )),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Image.asset(
+                                      'assets/alex-knight-199364-unsplash.png'),
+                                  Image.asset(
+                                      'assets/adam-jaime-119551-unsplash.png'),
+                                  Image.asset('assets/Group 158.png'),
+                                ],
+                              ),
                             ],
                           ),
                         )),

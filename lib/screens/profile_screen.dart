@@ -177,7 +177,7 @@ class ProfileScreen extends StatelessWidget {
                     padding: EdgeInsets.only(top: 90, left: 120),
                     child: CircleAvatar(
                       radius: 60,
-                      backgroundImage: AssetImage('assets/image1.png'),
+                      backgroundImage: AssetImage('assets/asset-2.png'),
                     )),
               ],
             ),

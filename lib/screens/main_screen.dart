@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mawhoop/screens/add_screen.dart';
+import 'package:mawhoop/screens/notification_screen.dart';
 import 'package:mawhoop/screens/profile_screen.dart';
+import 'package:mawhoop/screens/saved_screen.dart';
 import '../models/Nb_screen.dart';
 import 'home_screen.dart';
 
@@ -11,9 +14,9 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final List<NbScreen> listNav = [
     NbScreen(widgets: HomeScreen()),
-    NbScreen(widgets: HomeScreen()),
-    NbScreen(widgets: HomeScreen()),
-    NbScreen(widgets: HomeScreen()),
+    NbScreen(widgets: SavedScreen()),
+    NbScreen(widgets: AddScreen()),
+    NbScreen(widgets: NotificationScreen()),
     NbScreen(widgets: ProfileScreen()),
   ];
   int currentIndex = 0;
@@ -47,7 +50,7 @@ class _MainScreenState extends State<MainScreen> {
               Icons.save,
               color: Colors.grey,
             ),
-            label: 'Saved',
+            label: 'Category',
           ),
           BottomNavigationBarItem(
             activeIcon: Icon(

@@ -54,6 +54,7 @@ class ChatScreenPerson extends StatelessWidget {
                           width: 200,
                           child: ListTile(
                             leading: CircleAvatar(
+                              foregroundImage: AssetImage('assets/asset-4.png'),
                               radius: 30,
                             ),
                             title: Text(
@@ -121,7 +122,7 @@ class ChatScreenPerson extends StatelessWidget {
                                   ),
                                 );
                               },
-                            )
+                            ),
                           ],
                         )),
                   ),
