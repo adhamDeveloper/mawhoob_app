@@ -81,7 +81,7 @@ class ChatScreenPerson extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                         child: ListView(
-                          padding: const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(20),
                           physics: const BouncingScrollPhysics(),
                           children: [
                             ListView.builder(
@@ -123,8 +123,9 @@ class ChatScreenPerson extends StatelessWidget {
                                 );
                               },
                             ),
+                            const SizedBox(height: 50),
                           ],
-                        )),
+                        ),),
                   ),
                 ),
               ],

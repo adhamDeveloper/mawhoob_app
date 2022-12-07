@@ -24,14 +24,18 @@ class NotificationScreen extends StatelessWidget {
                       const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Icon(Icons.quiz, color: Colors.white),
-                          SizedBox(width: 20),
-                          Icon(Icons.arrow_back_ios_new, color: Colors.white),
-                          Spacer(),
-                          Icon(Icons.message, color: Colors.white),
-                          SizedBox(width: 20),
-                          Icon(Icons.more_vert, color: Colors.white),
+                        children: [
+                          const Icon(Icons.quiz, color: Colors.white),
+                          const SizedBox(width: 20),
+                          const Icon(Icons.arrow_back_ios_new,
+                              color: Colors.white),
+                          const Spacer(),
+                          IconButton(
+                            onPressed: () => Navigator.pushNamed(context, '/chat_screen'),
+                            icon: const Icon(Icons.message, color: Colors.white),
+                          ),
+                          const SizedBox(width: 20),
+                          const Icon(Icons.more_vert, color: Colors.white),
                         ],
                       ),
                       const Spacer(),
