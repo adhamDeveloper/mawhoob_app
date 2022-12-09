@@ -28,15 +28,15 @@ class ChatScreen extends StatelessWidget {
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            icon: Icon(Icons.arrow_back_ios_new,
+                            icon: const Icon(Icons.arrow_back_ios_new,
                                 color: Colors.white),
                           ),
                           const Spacer(),
                           const Icon(Icons.more_vert, color: Colors.white),
                         ],
                       ),
-                      Spacer(),
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                     ],
                   ),
                 ),
@@ -77,15 +77,7 @@ class ChatScreen extends StatelessWidget {
                                       fontSize: 18,
                                     ),
                                   )),
-                              ListView.builder(
-                                itemCount: 8,
-                                shrinkWrap: true,
-                                padding: EdgeInsets.zero,
-                                physics: const BouncingScrollPhysics(),
-                                itemBuilder: (context, index) {
-                                  return myContainer();
-                                },
-                              ),
+                              myContainer(),
                             ],
                           ),
                         )),
@@ -117,51 +109,194 @@ class myContainer extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, '/chat_person_screen');
       },
-      child: Container(
-        padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-        child: Row(
-          children: [
-            Expanded(
-              child: Row(
-                children: [
-                  const CircleAvatar(
-                    backgroundImage: AssetImage('assets/image3.png'),
-                    radius: 30,
-                  ),
-                  const SizedBox(
-                    width: 16,
-                  ),
-                  Container(
-                    color: Colors.transparent,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'adham',
-                          style: TextStyle(fontSize: 16),
+      child: ListView(
+        shrinkWrap: true,
+        children: [
+          Container(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        backgroundImage: AssetImage('assets/asset-1.png'),
+                        radius: 30,
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Container(
+                        color: Colors.transparent,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'أدهم',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            const SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'سلام',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
-                        const SizedBox(
-                          height: 6,
-                        ),
-                        Text(
-                          'Hellow!',
-                          style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey.shade600,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                const Text(
+                  '5:00',
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
-            const Text(
-              '2:00',
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          ),
+          Container(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        backgroundImage: AssetImage('assets/asset-2.png'),
+                        radius: 30,
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Container(
+                        color: Colors.transparent,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'أريج',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            const SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'تمام',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Text(
+                  '6:00',
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        backgroundImage: AssetImage('assets/asset-3.png'),
+                        radius: 30,
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Container(
+                        color: Colors.transparent,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'أسيل',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            const SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'تمام',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Text(
+                  '2:00',
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        backgroundImage: AssetImage('assets/asset-4.png'),
+                        radius: 30,
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Container(
+                        color: Colors.transparent,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'سيف',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            const SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'عليكم السلام',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Text(
+                  '11:00',
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

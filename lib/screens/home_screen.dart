@@ -7,6 +7,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String hint = 'أبحث عن موهبة';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(width: 20),
                         const Spacer(),
                         IconButton(
-                          onPressed: () => Navigator.pushNamed(context, '/chat_screen'),
-
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/chat_screen'),
                           icon: const Icon(Icons.message),
                           color: Colors.white,
                         ),
@@ -72,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(50)),
                     child: Padding(
                       padding: const EdgeInsets.only(
-                          right: 12, left: 12, bottom: 80),
+                          right: 12, left: 12, bottom: 20),
                       child: ListView(
                         physics: const BouncingScrollPhysics(),
                         children: [
@@ -106,6 +108,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         const Expanded(
                                           child: ListTile(
                                             trailing: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  'assets/asset-4.png'),
                                               radius: 20,
                                             ),
                                             title: Text(' الرسامة الصغيرة'),
@@ -125,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Expanded(
                                           child: Image.asset(
-                                            'assets/image2.png',
+                                            'assets/image1.png',
                                             fit: BoxFit.cover,
                                             width: double.infinity,
                                           ),
@@ -133,6 +137,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         const Expanded(
                                           child: ListTile(
                                             trailing: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  'assets/asset-4.png'),
                                               radius: 20,
                                             ),
                                             title: Text(' الرسامة الصغيرة'),
@@ -152,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Expanded(
                                           child: Image.asset(
-                                            'assets/image3.png',
+                                            'assets/image1.png',
                                             fit: BoxFit.cover,
                                             width: double.infinity,
                                           ),
@@ -160,6 +166,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         const Expanded(
                                           child: ListTile(
                                             trailing: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  'assets/asset-4.png'),
                                               radius: 20,
                                             ),
                                             title: Text(' الرسامة الصغيرة'),
@@ -179,14 +187,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Expanded(
                                           child: Image.asset(
-                                            'assets/image2.png',
+                                            'assets/image1.png',
                                             fit: BoxFit.cover,
                                             width: double.infinity,
                                           ),
                                         ),
                                         const Expanded(
                                           child: ListTile(
-                                            trailing: CircleAvatar(),
+                                            trailing: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  'assets/asset-4.png'),
+                                              radius: 20,
+                                            ),
                                             title: Text(' الرسامة الصغيرة'),
                                             subtitle:
                                                 Text('أريج محمد  I    الرسم'),
@@ -204,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Expanded(
                                           child: Image.asset(
-                                            'assets/image3.png',
+                                            'assets/image1.png',
                                             fit: BoxFit.cover,
                                             width: double.infinity,
                                           ),
@@ -212,6 +224,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                         const Expanded(
                                           child: ListTile(
                                             trailing: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  'assets/asset-4.png'),
+                                              radius: 20,
+                                            ),
+                                            title: Text(' الرسامة الصغيرة'),
+                                            subtitle:
+                                                Text('أريج محمد  I    الرسم'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 170,
+                                  width: 200,
+                                  child: Card(
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: Image.asset(
+                                            'assets/image1.png',
+                                            fit: BoxFit.cover,
+                                            width: double.infinity,
+                                          ),
+                                        ),
+                                        const Expanded(
+                                          child: ListTile(
+                                            trailing: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  'assets/asset-4.png'),
                                               radius: 20,
                                             ),
                                             title: Text(' الرسامة الصغيرة'),
@@ -227,12 +270,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           const SizedBox(height: 15),
-                          const Text(
-                            'الأكثر تقييماً لهذا الشهر',
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                                fontSize: 20, color: Color(0xffFDC93A)),
-                          ),
+                          const Text('الأكثر تقييماً لهذا الشهر',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                  fontSize: 20, color: Color(0xffFDC93A))),
                           Image.asset('assets/component.png'),
                           Image.asset('assets/component.png'),
                           Image.asset('assets/component1.png'),
@@ -245,34 +286,60 @@ class _HomeScreenState extends State<HomeScreen> {
           )),
           Positioned(
             top: 180,
-            left: 200,
+            left: 170,
+            right: 10,
             child: SizedBox(
-              width: 140,
+              width: 200,
               height: 55,
               child: Card(
                 elevation: 10,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40)),
                 child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
-                      Icon(
-                        Icons.arrow_circle_down,
-                        color: Colors.blue,
-                      ),
-                      Text('أبحث عن موهبة'),
-                    ],
+                  padding: const EdgeInsets.all(15),
+                  child: DropdownButton(
+                    dropdownColor: Colors.white,
+                    isExpanded: true,
+                    hint: Text(
+                      hint,
+                      style: const TextStyle(fontSize: 12),
+                    ),
+                    items: <String>[
+                      'البحث العلمي',
+                      'الاختراع والابتكار',
+                      'الفن التشكيلي',
+                      'الخط العربي ',
+                      'الشعر وكتابة القصائد',
+                      'الكتابة والتأليف',
+                      'الحاسب الالي',
+                    ].map((String value) {
+                      return DropdownMenuItem<String>(
+                        enabled: false,
+                        value: value,
+                        child: Text(
+                          value,
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        hint = value!;
+                      });
+                    },
                   ),
                 ),
               ),
             ),
           ),
-          Positioned(left: 220,bottom:600,child: Image.asset('assets/background3.png'),),
+          Positioned(
+            left: 220,
+            bottom: 600,
+            child: Image.asset('assets/background3.png'),
+          ),
           const Positioned(
             top: 180,
-            left: 30,
+            left: 10,
             child: SizedBox(
                 width: 160,
                 child: MyTextField(

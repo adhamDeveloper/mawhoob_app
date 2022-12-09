@@ -48,7 +48,7 @@ class AddScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50)),
                     child: Padding(
                         padding: const EdgeInsets.only(
-                            right: 12, left: 12, bottom: 80),
+                            right: 12, left: 12, bottom: 20),
                         child: ListView(
                           shrinkWrap: true,
                           physics: const BouncingScrollPhysics(),
@@ -58,28 +58,28 @@ class AddScreen extends StatelessWidget {
                               children: [
                                 IconButton(
                                     onPressed: () {},
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.favorite,
                                       color: Colors.red,
                                     )),
-                                Text('50'),
-                                Spacer(),
+                                const Text('50'),
+                                const Spacer(),
                                 IconButton(
                                     onPressed: () {},
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.star,
                                       color: Colors.yellow,
                                     )),
-                                Text('200'),
-                                Spacer(),
+                                const Text('200'),
+                                const Spacer(),
                                 IconButton(
                                     onPressed: () => myShareDialog(context),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.share,
                                       color: Colors.blue,
                                     )),
-                                Text('30'),
-                                Spacer(),
+                                const Text('30'),
+                                const Spacer(),
                                 ElevatedButton.icon(
                                   style: ElevatedButton.styleFrom(
                                     minimumSize: const Size(100, 40),
@@ -115,7 +115,7 @@ class AddScreen extends StatelessWidget {
                                     foregroundImage: AssetImage('assets/8.png'),
                                   )),
                             ),
-                            const SizedBox(height: 50),
+                            const SizedBox(height: 10),
                             const MyTextField(
                               icons: Icons.person,
                               text: 'Add a comment',
@@ -165,14 +165,21 @@ class AddScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 5.0),
                     Center(
-                      child: RatingBarIndicator(
-                        rating: 2.75,
-                        itemBuilder: (context, index) => const Icon(
+                      child: RatingBar.builder(
+                        initialRating: 3,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemPadding:
+                            const EdgeInsets.symmetric(horizontal: 4.0),
+                        itemBuilder: (context, _) => const Icon(
                           Icons.star,
                           color: Colors.amber,
                         ),
-                        itemCount: 5,
-                        itemSize: 30.0,
+                        onRatingUpdate: (rating) {
+                          print(rating);
+                        },
                       ),
                     ),
                     const SizedBox(height: 10.0),

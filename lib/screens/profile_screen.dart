@@ -219,14 +219,20 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 5.0),
                     Center(
-                      child: RatingBarIndicator(
-                        rating: 2.75,
-                        itemBuilder: (context, index) => const Icon(
+                      child: RatingBar.builder(
+                        initialRating: 3,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                        itemBuilder: (context, _) => const Icon(
                           Icons.star,
                           color: Colors.amber,
                         ),
-                        itemCount: 5,
-                        itemSize: 30.0,
+                        onRatingUpdate: (rating) {
+                          print(rating);
+                        },
                       ),
                     ),
                     const SizedBox(height: 10.0),
