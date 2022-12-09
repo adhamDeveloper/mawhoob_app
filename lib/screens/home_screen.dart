@@ -93,14 +93,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Row(
                               children: [
                                 SizedBox(
-                                  height: 170,
-                                  width: 200,
+                                  height: 200,
+                                  width: 250,
                                   child: Card(
                                     child: Column(
                                       children: [
                                         Expanded(
                                           child: Image.asset(
-                                            'assets/image1.png',
+                                            'assets/image3.png',
                                             fit: BoxFit.cover,
                                             width: double.infinity,
                                           ),
@@ -108,13 +108,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                         const Expanded(
                                           child: ListTile(
                                             trailing: CircleAvatar(
-                                              backgroundImage: AssetImage(
-                                                  'assets/asset-4.png'),
+                                              backgroundImage:
+                                                  AssetImage('assets/ci.png'),
                                               radius: 20,
                                             ),
-                                            title: Text(' الرسامة الصغيرة'),
-                                            subtitle:
-                                                Text('أريج محمد  I    الرسم'),
+                                            title: Text(
+                                              textAlign: TextAlign.right,
+                                              'من بحور الشعر قصيدة',
+                                              style: TextStyle(fontSize: 15),
+                                            ),
+                                            subtitle: Text(
+                                              textAlign: TextAlign.right,
+                                              'عبدالرحمن الشريف  I   الشعر',
+                                              style: TextStyle(fontSize: 15),
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -122,14 +129,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 170,
-                                  width: 200,
+                                  height: 200,
+                                  width: 250,
                                   child: Card(
                                     child: Column(
                                       children: [
                                         Expanded(
                                           child: Image.asset(
-                                            'assets/image1.png',
+                                            'assets/image2.png',
                                             fit: BoxFit.cover,
                                             width: double.infinity,
                                           ),
@@ -141,9 +148,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   'assets/asset-4.png'),
                                               radius: 20,
                                             ),
-                                            title: Text(' الرسامة الصغيرة'),
+                                            title: Text(' الرسامة الصغيرة', style: TextStyle(fontSize: 15),textAlign: TextAlign.right,),
                                             subtitle:
-                                                Text('أريج محمد  I    الرسم'),
+                                                Text('سيف أحمد  I    الرسم', style: TextStyle(fontSize: 15),textAlign: TextAlign.right,),
                                           ),
                                         ),
                                       ],
@@ -151,8 +158,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 170,
-                                  width: 200,
+                                  height: 200,
+                                  width: 250,
                                   child: Card(
                                     child: Column(
                                       children: [
@@ -167,99 +174,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                           child: ListTile(
                                             trailing: CircleAvatar(
                                               backgroundImage: AssetImage(
-                                                  'assets/asset-4.png'),
+                                                  'assets/asset-1.png'),
                                               radius: 20,
                                             ),
-                                            title: Text(' الرسامة الصغيرة'),
+                                            title: Text(textAlign: TextAlign.right,'المصورة الشغوفة', style: TextStyle(fontSize: 15),),
                                             subtitle:
-                                                Text('أريج محمد  I    الرسم'),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 170,
-                                  width: 200,
-                                  child: Card(
-                                    child: Column(
-                                      children: [
-                                        Expanded(
-                                          child: Image.asset(
-                                            'assets/image1.png',
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                          ),
-                                        ),
-                                        const Expanded(
-                                          child: ListTile(
-                                            trailing: CircleAvatar(
-                                              backgroundImage: AssetImage(
-                                                  'assets/asset-4.png'),
-                                              radius: 20,
-                                            ),
-                                            title: Text(' الرسامة الصغيرة'),
-                                            subtitle:
-                                                Text('أريج محمد  I    الرسم'),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 170,
-                                  width: 200,
-                                  child: Card(
-                                    child: Column(
-                                      children: [
-                                        Expanded(
-                                          child: Image.asset(
-                                            'assets/image1.png',
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                          ),
-                                        ),
-                                        const Expanded(
-                                          child: ListTile(
-                                            trailing: CircleAvatar(
-                                              backgroundImage: AssetImage(
-                                                  'assets/asset-4.png'),
-                                              radius: 20,
-                                            ),
-                                            title: Text(' الرسامة الصغيرة'),
-                                            subtitle:
-                                                Text('أريج محمد  I    الرسم'),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 170,
-                                  width: 200,
-                                  child: Card(
-                                    child: Column(
-                                      children: [
-                                        Expanded(
-                                          child: Image.asset(
-                                            'assets/image1.png',
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                          ),
-                                        ),
-                                        const Expanded(
-                                          child: ListTile(
-                                            trailing: CircleAvatar(
-                                              backgroundImage: AssetImage(
-                                                  'assets/asset-4.png'),
-                                              radius: 20,
-                                            ),
-                                            title: Text(' الرسامة الصغيرة'),
-                                            subtitle:
-                                                Text('أريج محمد  I    الرسم'),
+                                                Text(textAlign: TextAlign.right,'عائشة علي  I    الرسم', style: TextStyle(fontSize: 15),),
                                           ),
                                         ),
                                       ],
@@ -301,7 +221,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     isExpanded: true,
                     hint: Text(
                       hint,
-                      style: const TextStyle(fontSize: 12,fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.bold),
                     ),
                     items: <String>[
                       'البحث العلمي',

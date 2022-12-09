@@ -8,6 +8,7 @@ class SavedScreen extends StatefulWidget {
 }
 
 class _SavedScreenState extends State<SavedScreen> {
+  String hint = 'أبحث عن موهبة';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +55,8 @@ class _SavedScreenState extends State<SavedScreen> {
                           fontSize: 20,
                         ),
                       ),
-                      Spacer(),
+                     const  Spacer(),
+                     const  Spacer(),
                     ],
                   ),
                 ),
@@ -198,7 +200,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                     MainAxisAlignment.spaceAround,
                                 children: [
                                   Image.asset(
-                                      'assets/adam-whitlock-270558-unsplash.png'),
+                                      'assets/omans.png'),
                                   Image.asset(
                                       'assets/warren-wong-242286-unsplash.png'),
                                   Image.asset('assets/Group 157.png'),
@@ -234,33 +236,55 @@ class _SavedScreenState extends State<SavedScreen> {
                         )),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 220, left: 190),
+                Positioned(
+                  top: 210,
+                  left: 200,
+                  right: 10,
                   child: SizedBox(
-                    width: 140,
-                    height: 50,
+                    width: 200,
+                    height: 55,
                     child: Card(
                       elevation: 10,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
                       child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
-                            Icon(
-                              Icons.arrow_circle_down,
-                              color: Colors.blue,
-                            ),
-                            Text('أبحث عن موهبة'),
-                          ],
+                        padding: const EdgeInsets.all(15),
+                        child: DropdownButton(
+                          isExpanded: true,
+                          hint: Text(
+                            hint,
+                            style: const TextStyle(fontSize: 12,fontWeight: FontWeight.bold),
+                          ),
+                          items: <String>[
+                            'البحث العلمي',
+                            'الاختراع والابتكار',
+                            'الفن التشكيلي',
+                            'الخط العربي ',
+                            'الشعر وكتابة القصائد',
+                            'الكتابة والتأليف',
+                            'الحاسب الالي',
+                          ].map((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(
+                                value,
+                                style: const TextStyle(color: Colors.black),
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (values) {
+                            setState(() {
+                              hint = values!;
+                            });
+                          },
                         ),
                       ),
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 220, left: 30),
+                const Positioned(
+                  top: 215,
+                  left: 10,
                   child: SizedBox(
                       width: 160,
                       child: MyTextField(

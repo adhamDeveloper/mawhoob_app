@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.grey[200],
           textTheme: GoogleFonts.cairoTextTheme(textTheme).copyWith(
-            bodyText1: GoogleFonts.cairo(
-                textStyle: textTheme.bodyText2, fontSize: 30),
+            bodyText1:
+                GoogleFonts.cairo(textStyle: textTheme.bodyText2, fontSize: 22),
           )),
       initialRoute: '/auth_screen',
       routes: {

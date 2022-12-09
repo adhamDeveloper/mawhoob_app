@@ -21,7 +21,7 @@ class _AuthScreenState extends State<AuthScreen> {
         backgroundColor: const Color(0xffD5822E),
         body: Stack(
           children: [
-            // Positioned(left: 0,right: 0,child: Image.asset('assets/white_image.png',)),
+            Positioned(top: -130,right: -150,child: Image.asset('assets/white_image.png',fit: BoxFit.cover,)),
             Image.asset('assets/background.png'),
             Positioned(
               bottom: 600,
