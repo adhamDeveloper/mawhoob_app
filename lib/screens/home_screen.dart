@@ -298,11 +298,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(15),
                   child: DropdownButton(
-                    dropdownColor: Colors.white,
                     isExpanded: true,
                     hint: Text(
                       hint,
-                      style: const TextStyle(fontSize: 12),
+                      style: const TextStyle(fontSize: 12,fontWeight: FontWeight.bold),
                     ),
                     items: <String>[
                       'البحث العلمي',
@@ -314,7 +313,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       'الحاسب الالي',
                     ].map((String value) {
                       return DropdownMenuItem<String>(
-                        enabled: false,
                         value: value,
                         child: Text(
                           value,
@@ -322,9 +320,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       );
                     }).toList(),
-                    onChanged: (value) {
+                    onChanged: (values) {
                       setState(() {
-                        hint = value!;
+                        hint = values!;
                       });
                     },
                   ),
